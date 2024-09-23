@@ -9,43 +9,22 @@
     </style>
   </head>
   <body>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Subject Code</th>
-          <th>Subject Name</th>
-          <th>Grade</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1184</td>
-          <td>ENGLISH LANGUAGE</td>
-          <td>A2</td>
-        </tr>
-        <tr>
-          <td>5421</td>
-          <td>KOREAN LANGUAGE</td>
-          <td>A1</td>
-          <td>A1</td>
-        </tr>
-      </tbody>
-      <tfoot colspan="5">
-        <tr>
-          <td>Test</td>
-        </tr>
-      </tfoot>
-    </table>
+    <form>
+      <label for="userNumber">Please enter your number:</label>
+      <input type="number" id="userNumber" placeholder="87654321" class="form-control">
+      <div class="d-none text-danger" id="errorMessage">
+        <p>Please enter valid phone number</p>
+      </div>
+      <button type="button" class="btn btn-primary" onclick="buttonClick()">Submit</button>
+    </form>
   </body>
   <script>
-    let userValue = 0;
-    
-    if (userValue > 0) {
-      console.log("Positive number");
-    } else if (userValue < 0) {
-      console.log("Negative number");
-    } else {
-      console.log("Number is 0");
+    let buttonClick = () => {
+      let num = document.getElementById("userNumber");
+      console.log(num.value.length);
+
+      num.classList = "form-control is-invalid";
+      document.getElementById("errorMessage").classList = "text-danger"
     }
   </script>
 </html>
