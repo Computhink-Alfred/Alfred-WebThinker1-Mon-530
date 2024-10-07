@@ -12,19 +12,21 @@
     <form>
       <label for="userNumber">Please enter your number:</label>
       <input type="number" id="userNumber" placeholder="87654321" class="form-control">
-      <div class="d-none text-danger" id="errorMessage">
-        <p>Please enter valid phone number</p>
-      </div>
+      <p class="d-none text-danger" id="errorMessage">Please enter valid phone number</p>
       <button type="button" class="btn btn-primary" onclick="buttonClick()">Submit</button>
     </form>
+    <script>
+      const buttonClick = () => {
+        let userNumber = document.getElementById("userNumber").value.length;
+        console.log(document.getElementById("userNumber").value.length);
+        if (userNumber == 0) { 
+          document.getElementById("userNumber").classList = "form-control is-invalid";
+          document.getElementById("errorMessage").classList = "text-danger";
+        } else {
+          document.getElementById("userNumber").classList = "form-control";
+          document.getElementById("errorMessage").classList = "d-none text-danger";
+        }
+      }
+    </script>
   </body>
-  <script>
-    let buttonClick = () => {
-      let num = document.getElementById("userNumber");
-      console.log(num.value.length);
-
-      num.classList = "form-control is-invalid";
-      document.getElementById("errorMessage").classList = "text-danger"
-    }
-  </script>
 </html>

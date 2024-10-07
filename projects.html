@@ -49,19 +49,39 @@
 		<!-- Key section -->
 		<div class="container py-3 pb-4">
 			<!-- Create An Unordered List with 2 List Items -->
+			<ul class="nav nav-pills">
+				<li class="nav-item">
+					<button class="nav-link rounded-pill active" data-bs-toggle="pill" data-bs-target="#scratch">Scratch Project</button>
+				</li>
+				<li class="nav-item">
+					<button class="nav-link rounded-pill" data-bs-toggle="pill" data-bs-target="#javascript">JavaScript Animation</button>
+				</li>
+				<li class="nav-item">
+					<button class="nav-link rounded-pill" data-bs-toggle="pill" data-bs-target="#python">Python Projects</button>
+				</li>
+			</ul>
 
 			<div class="tab-content">
 				<!-- Create two tabs for Project Showcase
 	-  The first tab should have
 				- One header of "Monke & Banana" with the following source: https://scratch.mit.edu/projects/808392264/embed (Width 485 & Height 402)
-				- Another header of "Platformer Game" with the following source: https://scratch.mit.edu/projects/779856092/embed (Width 485 & Height 402)
-
+				- Another header of "Platformer Game" with the following source: https://scratch.mit.edu/projects/779856092/embed (Width 485 & Height 402) -->
+				<div class="tab-pane fade show active" id="scratch">
+					<h4>Monke & Banana</h4>
+					<iframe src="https://scratch.mit.edu/projects/808392264/embed" title="Monke & Banana project" width="485" height="402"></iframe>
+					<br>
+					<h4>Platformer Game</h4>
+					<iframe src="https://scratch.mit.edu/projects/779856092/embed" title="JavaScript Animation" width="485" height="402"></iframe>
+				</div>
+					<!--
 	-  The second tab should have
 				- A Canvas with a black border of size: Width 800 & Height 600 with an ID of "canvasBoard"
 				- 2 radio buttons:
 						- One of them should be named "Pause Animation" with an ID of "canvasPause" with a red looking appearance.
 						- Another one should be named "Play Animation"  with an ID of "canvasPlay" with a green looking appearance.  -->
-
+				<div class="tab-pane fade" id="javascript">
+					Javascript Animation
+				</div>
 			</div>
 		</div>
 	</article>

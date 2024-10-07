@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html><link href="img/download (2).jpg" rel="icon" />
+<link href="script/bootstrap.css" rel="stylesheets">
+    <form class="container py-3">
+        <div class="row gy-3">
+            <div class="col col-12 col-md-6">
+                <label for="contactName" class="form-label">Name*</label>
+                <input type="text" class="form-control is-invalid" id="contactName" placeholder="John Doe">
+                <div id="contactNameFeedback" class="text-danger">Please enter a name.</div>
+            </div>
+            <div class="col col-12 col-md-6">
+                <label for="contactEmail" class="form-label">Email Address*</label>
+                <input type="email" class="form-control is-invalid" id="contactEmail" placeholder="name@abc.com">
+                <div id="contactEmailFeedback" class="text-danger">Please enter an email.</div>
+            </div>
+            <div class="col col-12">
+                <label for="contactSubject" class="form-label">Subject*</label>
+                <input type="text" class="form-control is-invalid" id="contactSubject" placeholder="Enquiry on how to code">
+                <div id="contactSubjectFeedback" class="text-danger">Please enter a subject.</div>
+            </div>
+            <div class="col col-12">
+                <label for="contactMessage" class="form-label">Subject*</label>
+                <textarea type="text" class="form-control is-invalid" id="contactMessage" rows="5"></textarea>
+                <div id="contactMessageFeedback" class="text-danger">Please enter a message.</div>
+            </div>
+        </div>
+        <div class="py-3 pb-4">
+            <button type="button" class="btn btn-primary" onclick="validate()">Send</button>
+        </div>
+    </form>
+    <script>
+        const click = () =>{
+            if ((getElementById(contactMessageFeedback).value.length) > 50) {
+                                
+            }
+        }
+
+    </script>
+</html>
